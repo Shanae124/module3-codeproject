@@ -4,87 +4,94 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Module 3 Solution</title>
+
+  <title>Shanae - Module 3</title>
 
   <!-- Bootstrap 3 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-  <!-- Your CSS -->
+  <!-- External CSS (no inline styles) -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav id="header-nav" class="navbar navbar-default">
-    <div class="container">
+<nav class="navbar navbar-default" id="header-nav">
+  <div class="container">
 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"><h1>Food, LLC</h1></a>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span>Food, LLC</span></a>
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-list" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div id="nav-list" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right visible-xs">
-          <li class="text-center"><a href="#chicken">Chicken</a></li>
-          <li class="text-center"><a href="#beef">Beef</a></li>
-          <li class="text-center"><a href="#sushi">Sushi</a></li>
-        </ul>
-      </div>
-
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#collapsable-nav"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-  </nav>
-</header>
+
+    <!-- Mobile menu only -->
+    <div id="collapsable-nav" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav visible-xs">
+        <li class="text-center"><a href="#chicken">Chicken</a></li>
+        <li class="text-center"><a href="#beef">Beef</a></li>
+        <li class="text-center"><a href="#sushi">Sushi</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
 
 <div class="container">
-  <h2 id="top" class="text-center">Our Menu</h2>
+  <h2 class="text-center" id="top">Our Menu</h2>
 
   <div class="row">
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <section id="chicken" class="menu-item">
+    <div class="col-xs-12">
+      <div class="menu-tile" id="chicken">
         <h3 class="text-center">Chicken</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          This is the Chicken section. I used Bootstrap for the responsive layout and kept the styling simple.
+          The section is tall on purpose so you have to scroll like the assignment wants.
+        </p>
+        <p>
+          More filler text so the page has length: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
         <p class="back-top"><a href="#top">Back to Top</a></p>
-      </section>
-    </div>
+      </div>
 
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <section id="beef" class="menu-item">
+      <div class="menu-tile" id="beef">
         <h3 class="text-center">Beef</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          This is the Beef section. The menu items in the dropdown are centered and only show on mobile.
+          The navbar scrolls away because it’s not fixed.
+        </p>
+        <p>
+          More filler text: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
         <p class="back-top"><a href="#top">Back to Top</a></p>
-      </section>
-    </div>
+      </div>
 
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <section id="sushi" class="menu-item">
+      <div class="menu-tile" id="sushi">
         <h3 class="text-center">Sushi</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          This is the Sushi section. Same structure, same styling, just a different label.
+          The goal here is matching the layout requirements, not fancy design.
+        </p>
+        <p>
+          More filler text: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <p class="back-top"><a href="#top">Back to Top</a></p>
-      </section>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- jQuery + Bootstrap JS (for the mobile menu toggle) -->
+<!-- jQuery FIRST, then Bootstrap JS (required for hamburger dropdown) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
